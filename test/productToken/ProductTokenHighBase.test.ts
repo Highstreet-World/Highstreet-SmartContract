@@ -250,10 +250,6 @@ describe("ProductTokenHighBase test", () => {
   });
 
   describe("platform features test", () => {
-    // beforeEach(async () => {
-    //   await deployContract();
-    //   await this.token.connect(user1).faucet(numberToBigNumber(1000));
-    // });
     let context: DeployContractFixtureReturnedType;
     beforeEach(async () => {
       context = await deployContractFixture();
