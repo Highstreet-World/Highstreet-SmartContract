@@ -103,8 +103,9 @@ contract EightBit is Ownable, ERC721Enumerable, MinterAccessControl {
   function _beforeTokenTransfer(
     address from_,
     address to_,
-    uint256 tokenId_
-  ) internal virtual {
+    uint256 tokenId_,
+    uint256 /*amount_*/
+  ) internal virtual override {
     require(to_ != address(this), 'this contract cannot be receiver');
     super._beforeTokenTransfer(from_, to_, tokenId_, 0);
   }
